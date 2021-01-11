@@ -11,7 +11,7 @@ import { MatSliderModule } from '@angular/material/slider';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    MatSliderModule,
+    MatSliderModule
   ]
 })
 export class ProfileModule { }

@@ -1,1 +1,24 @@
-<p>login works!</p>
+<form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+
+  <div class="login-area">
+
+    <label>
+      <input class="single-field" type="text" formControlName="username" placeholder="Username">
+    </label>
+    <!-- form.get('username')!.invalid ||  -->
+    <span class="field-error" *ngIf="form.get('username')!.touched ">
+      Please enter a valid username
+    </span>
+  </div>
+
+  <div class="login-area">
+    <label>
+      <input class="single-field" type="password" formControlName="password" placeholder="Password">
+    </label>
+    <span class="field-error" *ngIf="form.get('password')!.touched ">
+      Please enter a password
+    </span>
+  </div>
+
+  <button mat-flat-button type="submit" [disabled]="form.invalid">Sign in</button>
+</form>
