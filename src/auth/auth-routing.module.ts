@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { LoginLayoutComponent } from './layout/login-layout/login-layout.component';
+import { VerifyComponent } from './verify/verify.component';
 
 
 const routes: Routes = [
@@ -13,9 +14,10 @@ const routes: Routes = [
         { path: '', component: LoginLayoutComponent, children:
         [
             { path: 'login', component: LoginComponent },
-            { path: 'registration', component: RegistrationComponent }
+            { path: 'registration', component: RegistrationComponent },
           ]
-        }
+        },
+        { path: 'activate/:uid/:token', component: VerifyComponent }
       ]
   },
 ];

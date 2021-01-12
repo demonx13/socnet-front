@@ -1,1 +1,32 @@
-<p>registration works!</p>
+<h2 class="create-acc">Create An Account</h2>
+<form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+  <span *ngIf="errorRes">
+      {{errorRes}}
+  </span>
+  <div class="login">
+    <label>
+      <input class="single-field" type="text" formControlName="username" placeholder="username">
+    </label>
+    <span class="field-error" *ngIf="form.get('username')!.touched ">
+      Please enter a valid username
+    </span>
+  </div>
+  <div class="login">
+    <label>
+      <input class="single-field" type="email" formControlName="email" autocomplete="on" placeholder="email">
+    </label>
+    <span class="field-error" *ngIf="form.get('username')!.invalid || form.get('username')!.touched ">
+      Please enter a valid email
+    </span>
+  </div>
+  <div class="registration">
+    <label>
+      <input class="single-field" type="password" formControlName="password" placeholder="password">
+    </label>
+    <span *ngIf="form.get('password')!.touched">
+      Please enter password
+    </span>
+  </div>
+
+  <button class="submit-btn" type="submit" [disabled]="form.invalid">Создать</button>
+</form>
