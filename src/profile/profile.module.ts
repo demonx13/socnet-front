@@ -6,6 +6,7 @@ import { WallComponent } from './components/wall/wall.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule,
   ]
 })
 export class ProfileModule { }

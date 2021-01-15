@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label><input type="text" placeholder="username" formControlName="username"></label>
+  <label><input type="text" placeholder="first_name" formControlName="first_name"></label>
+  <label><input type="text" placeholder="middle_name" formControlName="middle_name"></label>
+  <label><input type="text" placeholder="last_name" formControlName="last_name"></label>
+  <label><input type="text" placeholder="phone" formControlName="phone"></label>
+  <label><input type="text" placeholder="bio" formControlName="bio"></label>
+  <label><input type="text" placeholder="github" formControlName="github"></label>
+  <label><input type="text" placeholder="birthday" formControlName="birthday"></label>
+  <label><input type="text" placeholder="gender" formControlName="gender"></label>
+<!--  <label><input type="text" placeholder="technology" formControlName="technology"></label>-->
+  <button class="submit-btn" type="submit" [disabled]="form.invalid">Update</button>
+</form>
