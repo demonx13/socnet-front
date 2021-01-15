@@ -1,0 +1,37 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 15%) minmax(565px, 50%) minmax(220px, 15%) auto;
+  grid-template-rows: 60px 100%;
+  grid-template-areas:
+  ". header  header  header  ."
+  ". left-sb content rght-sb ."
+  ". .       content .       .";
+}
+
+.header-div {
+  display: inline;
+}
+
+header {
+  margin: 15px;
+  grid-area: header;
+  border: 1px solid #333333;
+}
+
+.left-sidebar {
+  margin: 15px;
+  grid-area: left-sb;
+  border: 1px solid #333333;
+}
+
+.content {
+  margin: 15px;
+  grid-area: content;
+  border: 1px solid #333333;
+}
+
+.right-sidebar {
+  margin: 15px;
+  grid-area: rght-sb;
+  border: 1px solid #333333;
+}
